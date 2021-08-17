@@ -124,9 +124,9 @@
       // const input = document.getElementById('inputField')
       // 
 
-      const findQuery = (ev) => {
-        let query = ev.target.value
-      }
+      // const findQuery = (ev) => {
+      //   let query = ev.target.value
+      // }
 
       const users = []
 
@@ -145,7 +145,7 @@
 
       const displayUsers = (array) => {
         const parentDiv = document.getElementById('userBox')
-        array.map(user => {
+        let users = array.map(user => {
           parentDiv.innerHTML += `
                     
                 <div class="card m-2 shadow">
@@ -166,8 +166,8 @@
 
      
 
-      const filterUser = (q = query) => {
-        console.log(q);
+      const filterUser = (q) => {
+        console.log(q.target.value);
 
         const filteredUser = users.filter((user) => 
         user.name.toLowerCase().includes(q.toLowerCase()))
